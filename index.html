@@ -7,80 +7,68 @@
 
 <link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
-
 </head>
 <body>
 
 <div id="progress-bar"></div>
-<div class="cursor"></div>
 
 <!-- HEADER -->
 <header class="navbar">
   <div class="logo">ARVRAJ</div>
 
-  <nav>
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+  <nav id="nav-links">
     <a href="#">Shop</a>
     <a href="#">Men</a>
     <a href="#">Women</a>
     <a href="#">New</a>
     <a href="#">Contact</a>
   </nav>
-
-  <div class="nav-icons">
-    <span>🛒 <span id="cart-count">0</span></span>
-    <span>❤ <span id="wish-count">0</span></span>
-  </div>
 </header>
 
 <!-- HERO -->
 <section class="hero reveal">
-  <div class="hero-content">
-    <h1>Elevate Your Everyday Style</h1>
-    <p>Premium Fashion. Modern India. Global Standard.</p>
-    <div class="hero-buttons">
-      <button class="btn">Shop Men</button>
-      <button class="btn">Shop Women</button>
-      <a href="https://wa.me/919999999999?text=Hi%20ARVRAJ%20Team,%20I’m%20interested%20in%20your%20collection."
-         class="btn whatsapp-btn">Chat on WhatsApp</a>
-    </div>
+  <h1>Elevate Your Everyday Style</h1>
+  <p>Premium Fashion. Modern India. Global Standard.</p>
+
+  <div class="hero-buttons">
+    <button class="btn">Shop Men</button>
+    <button class="btn">Shop Women</button>
+    <a href="https://wa.me/919999999999?text=Hi%20ARVRAJ%20Team,%20I’m%20interested%20in%20your%20collection."
+       class="btn whatsapp-btn">Chat on WhatsApp</a>
   </div>
 </section>
 
 <!-- FEATURED -->
-<section class="section alt reveal">
+<section class="section light reveal">
 <h2>Featured Categories</h2>
-<div class="card-grid">
-
-<div class="glass-card">Men</div>
-<div class="glass-card">Women</div>
-<div class="glass-card">New Arrivals</div>
-<div class="glass-card">Best Sellers</div>
-<div class="glass-card">Summer Collection</div>
-
+<div class="grid">
+<div class="card">Men</div>
+<div class="card">Women</div>
+<div class="card">New Arrivals</div>
+<div class="card">Best Sellers</div>
+<div class="card">Summer Collection</div>
 </div>
 </section>
 
 <!-- PRODUCTS -->
 <section class="section reveal">
 <h2>Trending Products</h2>
-<div class="product-grid">
+<div class="grid">
 
 <div class="product-card">
 <img src="https://images.unsplash.com/photo-1520975918318-7d98a5e8d1a6">
-<div class="product-info">
 <h3>Urban Black Jacket</h3>
 <p>₹2,499</p>
 <button class="btn">Add to Cart</button>
 </div>
-</div>
 
 <div class="product-card">
 <img src="https://images.unsplash.com/photo-1520974735194-4f84dbf26e16">
-<div class="product-info">
 <h3>Royal Blue Kurti</h3>
 <p>₹1,799</p>
 <button class="btn">Add to Cart</button>
-</div>
 </div>
 
 </div>
@@ -89,24 +77,26 @@
 <!-- WHY -->
 <section class="section dark reveal">
 <h2>Why ARVRAJ</h2>
-<div class="why-grid">
-<div class="why-card">✨ Premium Fabric</div>
-<div class="why-card">💎 Affordable Luxury</div>
-<div class="why-card">🚚 Pan India Shipping</div>
-<div class="why-card">🔁 7-Day Returns</div>
-<div class="why-card">🔐 Secure Payments</div>
-<div class="why-card">💬 WhatsApp Support</div>
+<div class="grid">
+<div class="card">✨ Premium Fabric</div>
+<div class="card">💎 Affordable Luxury</div>
+<div class="card">🚚 Pan-India Shipping</div>
+<div class="card">🔁 7-Day Returns</div>
+<div class="card">🔐 Secure Payments</div>
+<div class="card">💬 WhatsApp Support</div>
 </div>
 </section>
 
-<!-- EMAIL SECTION -->
-<section class="email-section reveal">
-<div class="email-card">
+<!-- EMAIL SUBSCRIBE -->
+<section class="section email-section reveal">
 <h2>Get 10% Off Your First Order</h2>
-<input type="email" placeholder="Enter your email">
-<button class="btn">Unlock Discount</button>
-<p>Prefer chatting? <a href="#">Message us on WhatsApp</a></p>
+
+<div class="email-box">
+<input type="email" id="emailInput" placeholder="Enter your email">
+<button class="btn" onclick="subscribe()">Unlock Discount</button>
 </div>
+
+<p id="emailMessage"></p>
 </section>
 
 <!-- FOOTER -->
@@ -123,5 +113,4 @@ class="floating-whatsapp">
 
 <script src="script.js"></script>
 </body>
-
 </html>
