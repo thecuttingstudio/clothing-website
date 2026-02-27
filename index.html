@@ -3,114 +3,269 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ARVRAJ | Premium Fashion</title>
+<title>ARVRAJ</title>
 
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+}
+
+/* ===== CONTAINER ===== */
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* ===== NAVBAR ===== */
+nav{
+    background:black;
+    color:white;
+    padding:15px 0;
+}
+
+.nav-wrapper{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+}
+
+.nav-links{
+    display:flex;
+    gap:20px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+}
+
+.nav-links a:hover{
+    color:#a855f7;
+}
+
+/* ===== HERO ===== */
+.hero{
+    background:linear-gradient(to right, black, #333);
+    color:white;
+    text-align:center;
+    padding:80px 20px;
+}
+
+.hero h1{
+    font-size:40px;
+    margin-bottom:10px;
+}
+
+.hero p{
+    font-size:18px;
+    opacity:0.8;
+}
+
+/* ===== SECTION ===== */
+.section{
+    padding:60px 0;
+    text-align:center;
+}
+
+.section h2{
+    margin-bottom:30px;
+}
+
+/* ===== PRODUCTS GRID ===== */
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card h3{
+    margin-bottom:10px;
+}
+
+.card button{
+    margin-top:10px;
+    padding:8px 15px;
+    border:none;
+    background:#7c3aed;
+    color:white;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.card button:hover{
+    background:#5b21b6;
+}
+
+/* ===== WHY SECTION ===== */
+.why{
+    background:black;
+    color:white;
+    padding:60px 20px;
+    text-align:center;
+}
+
+/* ===== NEWSLETTER ===== */
+.newsletter{
+    background:linear-gradient(to right,#6d28d9,#a855f7);
+    padding:40px 20px;
+    text-align:center;
+    color:white;
+}
+
+.newsletter input{
+    padding:10px;
+    width:250px;
+    max-width:80%;
+    border:none;
+    border-radius:5px;
+    margin-right:10px;
+}
+
+.newsletter button{
+    padding:10px 15px;
+    border:none;
+    background:black;
+    color:white;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+/* ===== FOOTER ===== */
+footer{
+    background:black;
+    color:white;
+    text-align:center;
+    padding:20px;
+    font-size:14px;
+}
+
+/* ===== MOBILE NAV ===== */
+@media(max-width:768px){
+    .nav-links{
+        display:none;
+        flex-direction:column;
+        background:black;
+        position:absolute;
+        right:20px;
+        top:60px;
+        padding:20px;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .menu-btn{
+        display:block;
+        cursor:pointer;
+        font-size:20px;
+    }
+}
+
+@media(min-width:769px){
+    .menu-btn{
+        display:none;
+    }
+}
+</style>
 </head>
 <body>
 
-<div id="progress-bar"></div>
-
-<!-- HEADER -->
-<header class="navbar">
-  <div class="logo">ARVRAJ</div>
-
-  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
-  <nav id="nav-links">
-    <a href="#">Shop</a>
-    <a href="#">Men</a>
-    <a href="#">Women</a>
-    <a href="#">New</a>
-    <a href="#">Contact</a>
-  </nav>
-</header>
+<!-- NAVBAR -->
+<nav>
+    <div class="container nav-wrapper">
+        <div class="logo">ARVRAJ</div>
+        <div class="menu-btn" onclick="toggleMenu()">☰</div>
+        <div class="nav-links" id="navLinks">
+            <a href="#">Home</a>
+            <a href="#">Shop</a>
+            <a href="#">Men</a>
+            <a href="#">Women</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+</nav>
 
 <!-- HERO -->
-<section class="hero reveal">
-  <h1>Elevate Your Everyday Style</h1>
-  <p>Premium Fashion. Modern India. Global Standard.</p>
-
-  <div class="hero-buttons">
-    <button class="btn">Shop Men</button>
-    <button class="btn">Shop Women</button>
-    <a href="https://wa.me/919999999999?text=Hi%20ARVRAJ%20Team,%20I’m%20interested%20in%20your%20collection."
-       class="btn whatsapp-btn">Chat on WhatsApp</a>
-  </div>
-</section>
-
-<!-- FEATURED -->
-<section class="section light reveal">
-<h2>Featured Categories</h2>
-<div class="grid">
-<div class="card">Men</div>
-<div class="card">Women</div>
-<div class="card">New Arrivals</div>
-<div class="card">Best Sellers</div>
-<div class="card">Summer Collection</div>
-</div>
+<section class="hero">
+    <h1>Welcome to ARVRAJ</h1>
+    <p>Premium Fashion. Modern Style.</p>
 </section>
 
 <!-- PRODUCTS -->
-<section class="section reveal">
-<h2>Trending Products</h2>
-<div class="grid">
+<section class="section">
+    <div class="container">
+        <h2>Trending Products</h2>
+        <div class="products">
+            <div class="card">
+                <h3>Urban Black Jacket</h3>
+                <p>₹1999</p>
+                <button>Add to Cart</button>
+            </div>
 
-<div class="product-card">
-<img src="https://images.unsplash.com/photo-1520975918318-7d98a5e8d1a6">
-<h3>Urban Black Jacket</h3>
-<p>₹2,499</p>
-<button class="btn">Add to Cart</button>
-</div>
+            <div class="card">
+                <h3>Royal Blue Kurta</h3>
+                <p>₹1499</p>
+                <button>Add to Cart</button>
+            </div>
 
-<div class="product-card">
-<img src="https://images.unsplash.com/photo-1520974735194-4f84dbf26e16">
-<h3>Royal Blue Kurti</h3>
-<p>₹1,799</p>
-<button class="btn">Add to Cart</button>
-</div>
-
-</div>
+            <div class="card">
+                <h3>Classic White Shirt</h3>
+                <p>₹999</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </div>
 </section>
 
-<!-- WHY -->
-<section class="section dark reveal">
-<h2>Why ARVRAJ</h2>
-<div class="grid">
-<div class="card">✨ Premium Fabric</div>
-<div class="card">💎 Affordable Luxury</div>
-<div class="card">🚚 Pan-India Shipping</div>
-<div class="card">🔁 7-Day Returns</div>
-<div class="card">🔐 Secure Payments</div>
-<div class="card">💬 WhatsApp Support</div>
-</div>
+<!-- WHY ARVRAJ -->
+<section class="why">
+    <h2>Why ARVRAJ?</h2>
+    <p>✔ Premium Quality</p>
+    <p>✔ Affordable Pricing</p>
+    <p>✔ Fast Delivery</p>
+    <p>✔ Modern Designs</p>
 </section>
 
-<!-- EMAIL SUBSCRIBE -->
-<section class="section email-section reveal">
-<h2>Get 10% Off Your First Order</h2>
-
-<div class="email-box">
-<input type="email" id="emailInput" placeholder="Enter your email">
-<button class="btn" onclick="subscribe()">Unlock Discount</button>
-</div>
-
-<p id="emailMessage"></p>
+<!-- NEWSLETTER -->
+<section class="newsletter">
+    <h2>Get 10% Off Your First Order</h2>
+    <br>
+    <input type="email" placeholder="Enter your email">
+    <button>Subscribe</button>
 </section>
 
 <!-- FOOTER -->
 <footer>
-<p>© 2026 ARVRAJ India | Premium Fashion</p>
+    © 2026 ARVRAJ | All Rights Reserved
 </footer>
 
-<!-- FLOATING WHATSAPP -->
-<a href="https://wa.me/919999999999?text=Hi%20ARVRAJ%20Team,%20I’m%20interested%20in%20your%20collection."
-class="floating-whatsapp">
-💬
-<span class="tooltip">Chat with us on WhatsApp</span>
-</a>
+<script>
+function toggleMenu(){
+    document.getElementById("navLinks").classList.toggle("active");
+}
+</script>
 
-<script src="script.js"></script>
 </body>
 </html>
